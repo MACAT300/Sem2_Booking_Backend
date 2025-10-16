@@ -21,7 +21,7 @@ const getBooking = async (id) => {
 
 // add booking
 async function addBooking(user, room, checkInDate, checkOutDate, totalPrice) {
-  // 🔍 检查是否有同房间、时间重叠的预订
+  //  检查是否有同房间、时间重叠的预订
   const conflictBooking = await Booking.findOne({
     room,
     $or: [
